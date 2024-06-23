@@ -1,0 +1,19 @@
+[
+    {"id":1,
+"nombre": "Noelia Lopez",
+"email": "noelialop@gmail.com",
+"alimentacion": "vegana",
+"otros": "sin cacao"},
+
+{"id":1,
+"nombre": "Santiago Amaranto",
+"email":"santiamaranto@prueba.com",
+"alimentacion":"vegetariana",
+"otros":" sin azúcar"},
+
+{"id":1,
+"nombre": "Rosalía Estival",
+"email":"rosaesti@gmial.com",
+"alimentacion": "crudivora",
+"otros":"ninguna"}
+]
