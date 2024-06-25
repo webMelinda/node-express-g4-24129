@@ -14,8 +14,11 @@ app.use(express.static(path.join(__dirname, "public", "pages")));
 app.use("/lista", require("./routes/invitacion.router"));
 
 
-app.get("/", (req, res) => {
-  res.send("Hola desde Express!!!");
+// app.get("/", (req, res) => {
+//   res.send("Hola desde Express!!!");
+// });
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 app.get("/invitados", (req, res) => {
