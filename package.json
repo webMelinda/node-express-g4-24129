@@ -1,5 +1,5 @@
 {
-  "name": "proeyecto_node_invitacion",
+  "name": "node-express-g4-24129",
   "version": "1.0.0",
   "description": "Invitación para eventos",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webMelinda/invitacion.git"
+    "url": "git+https://github.com/webMelinda/node-express-g4-24129.git"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/webMelinda/invitacion/issues"
+    "url": "https://github.com/webMelinda/node-express-g4-24129/issues"
   },
-  "homepage": "https://github.com/webMelinda/invitacion#readme",
+  "homepage": "https://github.com/webMelinda/node-express-g4-24129#readme",
   "dependencies": {
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
