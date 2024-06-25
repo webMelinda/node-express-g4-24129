@@ -1,0 +1,15 @@
+body {background: #C06C6E;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFE3E0, #C06C6E);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFE3E0, #C06C6E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    
+    
+
+}
+
+
+
+.center{
+    text-align: center !important;
+    vertical-align: middle !important;
+}

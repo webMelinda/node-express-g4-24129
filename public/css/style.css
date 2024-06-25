@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --primer-color: #FAFAE9;
+    --segundo-color: #ffff8c;
+    --tercer-color: #C06C6E;
+    --cuarto-color: #FFE3E0;     
+
+    --form-cuadro:  rgb(218, 218, 218);
+    --texto-formulario: dimgrey;
+    --texto-cargaInvitado: black;
+    --texto-btn: rgb(93, 93, 200);
+    --cuadro-btn: rgb(190, 190, 190);
+    --cuadro-hover: rgb(216, 210, 210);
+    --cuadro-invitados: rgb(240, 237, 237);
+    --select-acompanantes: rgb(196, 190, 190);
+}
+
+
+body {
+    background-image: url(../img/image21.png);
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    background-size: cover;
+    margin-right: 3rem !important;
+    margin-left: 3rem !important;
+}
+/* Pagina de incio con boton para entrar al resto de la pagina */
+.inicio{
+    position: absolute;
+    inset: 0;
+    background-image: url(../img/image21.png);
+    height: 100vh;
+    background-position: center;
+    text-align: center;
+    align-content: center;
+    background-size: cover;
+    top: 0;
+}
+.contenedorClaro{
+    background-color: var(--primer-color);
+    margin: 4rem;
+    height: 90vh;
+    align-content: center;
+}
+.nombres{
+    font-size: 120px;
+}
+
+.tituloInicio{
+    font-size: 90px;
+}
+
+.fechaManual{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    margin: 10px;
+}
+
+#btnEntrar{
+    margin: 20px;
+    width: fit-content;
+    height: 50px;
+    padding: 0 5px;
+    border: 5px solid var(--tercer-color);
+    font-size: 120%;
+    cursor: pointer;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.anillo{
+    margin: 10px;
+    width: 45px;
+    height: 50px;
+}
+
+/* Contador */
+
+.contador{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+    margin: 0 auto;
+    padding: 2% 0;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.numContador{
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    background-color: var(--cuarto-color);
+    height: 70px;
+    align-content: center;
+    margin: 10px;
+    padding: 25px;
+    border-radius: 15%;
+}
+
+span{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+
+header, main {
+    background-color:var(--primer-color);   
+}
+
+footer{
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+}
+
+
+/*Navbar*/
+
+.logo {
+    width: 20px; 
+    height: auto;
+    margin: 10px;
+}
+
+.navbar {
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+    background-color: #FAFAE9;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar li {
+    display: inline;
+    margin:  1px 15px;
+    font-family: "Roboto";
+}
+
+.navbar li a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s; 
+}
+
+.navbar li a:hover {
+    color: var(--tercer-color);
+    text-decoration: underline;
+}
+
+
+main {
+    padding-top: 60px; 
+    margin-top: 20px; 
+    scroll-behavior: smooth;
+}
+
+h1{
+    margin-bottom: 1rem;
+    font-family: "Pinyon Script", cursive;
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+}
+/* Nuestra historia */
+
+.historia{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    text-align: center;
+    
+    & div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    & img{
+        width: 80%;
+        filter: drop-shadow(5px 5px 10px #000);
+    }
+}
+
+.fotonovios1{
+    position: relative;
+    top: 10%;
+    left: 10%;
+}
+.fotonovios2{
+    position: relative;
+    bottom: 10%;
+    right: 10%;
+}
+
+
+/* general contenido lugar y regalos */
+.contenido {
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    gap: 10px;
+    padding: 1em;
+}
+
+.contenido div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    font-size: 20px;
+}
+
+/* Lugar */
+
+.contenido-lugar img{
+    width: 100%;
+    box-shadow: 4px 6px 6px 1px rgba(184,184,184,1);
+}
+
+.mapa{
+    width: 450px;
+    height: 300px;
+    border: 0;
+    box-shadow: 4px 6px 6px 1px rgba(184,184,184,1);
+}
+
+
+/* Galeria */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 10px;
+    margin-bottom: 1rem;
+}
+
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    box-shadow: 4px 6px 6px 1px rgb(146, 144, 144);
+    border-radius: 8px;
+}
+.grid-item:hover img {
+    transform: scale(1.2); 
+}
+
+/* HEAD */
+
+a{
+    text-decoration: none;
+}
+
+i{
+    color: var(--tercer-color);
+}
+
+
+/*PROPIEDADES DEL FORMULARIO*/
+.contenido-asistencia {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 10px;
+    padding: 1em;
+
+    form {
+        margin: 0 12%;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+        font-family: "Roboto", sans-serif;
+
+        .cuadro-form {
+            width: 100%;
+            background-color: var(--form-cuadro);
+            border-radius: 0.8em;
+            border-color: transparent;
+            margin-top: 0.7em;
+            padding: 0.3em 0 0.3em 0.75em;
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+
+        .opciones-form {
+            width: 50%;
+            margin-top: 0.5em;
+            margin-left: 50%;
+            background-color: var(--form-cuadro);
+            border-radius: 0.8em;
+            border-color: transparent;
+            padding: 0 0 0 0.75em;
+            font-size: 1em;
+        }
+
+        .texto-form {
+            color: var(--texto-cargaInvitado);
+            font-family: "Roboto", sans-serif;
+        }
+
+        ::placeholder,
+        label {
+            color: var(--texto-formulario);
+        }
+
+        select, option {
+            color: var(--texto-formulario);
+            font-size: 1em
+        }
+    }
+    .form-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 60%;
+        }
+    }
+    
+
+    /*Propiedades de botones para Asitencia*/
+    .cuadrobtn-form {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: right;
+        margin-top: 1.2em;
+
+        .formbtn {
+            color: var(--texto-btn);
+            padding: 0.2em 0.3em;
+            margin-left: 0.7em;
+            background-color: var(--cuadro-btn);
+            font-size: 0.9em;
+            font-weight: 700;
+            border-color: transparent;
+            border-radius: 0.5em;
+        }
+
+        .formbtn:hover {
+            background-color: var(--cuadro-hover);
+            cursor: pointer;
+            border-color: var(--texto-btn);
+        }
+    }
+}
+
+    /*Estilo para mensajes de error en el formulario*/
+    .cuadroerror1 {
+        color: red;
+        font-weight: 700;
+        font-size: small;
+        margin-left: 1em;
+    }
+    .cuadroerror2 {
+        color: red;
+        font-weight: 700;
+        font-size: small;
+        margin-left: 53%;
+    }
+    .cuadroerror3 {
+        border: red;
+    }
+
+
+/* Estilos para pantallas medianas */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .navbar li {
+        margin: 1px 20px;
+    }
+
+    main {
+        padding-top: 100px;
+    }
+
+    .mapa{
+        width: 300px;
+        height: 225px;
+    }
+
+    .contenido-asistencia form {
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .form-img img {
+        width: 80%;
+    }
+
+    .contador {
+        width: 60%;
+    }
+
+    .numContador {
+        width: auto;
+        font-size: 17px;
+        margin: 0 3px;
+    }
+}
+/* Estilos para pantallas pequeñas */
+@media (max-width: 700px) {
+    
+    body {
+        margin-right: 1rem !important;
+        margin-left: 1rem !important;
+    }
+
+    .inicio {
+        margin: 0;
+    }
+
+    .contenedorClaro {
+        margin: 2rem;
+    }
+
+    .nombres {
+        font-size: 60px;
+    }
+
+    .tituloInicio {
+        font-size: 60px;
+    }
+
+    .fechaManual {
+        margin: 5px;
+    }
+
+    #btnEntrar {
+        font-size: 100%;
+        margin: 10px;
+    }
+
+    .anillo {
+        margin: 5px;
+        width: 30px;
+    }
+
+    .contador {
+        width: 90%;
+    }
+
+    .numContador {
+        width: 90%;
+        font-size: 16px;
+        margin: 5px;
+    }
+
+    .contenido-lugar h4{
+        font-size: 16px;
+    }
+
+    .mapa{
+        width: 100px;
+        height: 150px;
+    }
+
+    .contenido-regalos p, a {
+        font-size: 12px;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    section h1 {
+        font-size: 2rem;
+    }
+
+    #regalos div img {
+        width: 30%;
+    }
+
+    #asistencia .contenido-asistencia {
+        display: flex;
+        width: 100%;
+        font-size: 0.8rem;
+    }
+
+    #asistencia .contenido-asistencia .form-img {
+        display: none;
+    }
+
+    #musica .contenido-musica {
+        font-size: 0.8rem;
+        display: flex;
+        justify-content: center;
+        margin-right: rem;        /* ver */
+    }
+
+    #galeria .grid-container .grid-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    #galeria .grid-container .grid-item img {
+        max-width: 60%;
+        height: auto;
+
+    }
+
+
+}

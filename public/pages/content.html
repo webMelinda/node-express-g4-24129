@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Invitacion</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light justify-content-between fixed-top">
+            <a class="navbar-brand" href="#">
+                <img src="../img/amor.png" alt="Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto ">
+                    <li ><a href="#historia">Historia</a></li>
+                    <li ><a href="#lugar">Lugar</a></li>
+                    <li ><a href="#regalos">Regalos</a></li>
+                    <li ><a href="#asistencia">Asistencia</a></li>
+                    <li ><a href="../pages/lista.html">Lista Invitados</a></li>
+                    <li ><a href="#galeria">Galería</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contenedorHistoria" id="historia">
+            <div class="contador" id="clock">
+                <div>
+                    <p class="numContador" id="dias">99</p>
+                    <span>DIAS</span>
+                </div>
+                <div>
+                    <p class="numContador" id="horas">23</p>
+                    <span>HORAS</span>
+                </div>
+                <div>
+                    <p class="numContador" id="minutos">12</p>
+                    <span>MINUTOS</span>
+                </div>
+                <div>
+                    <p class="numContador" id="segundos">12</p>
+                    <span>SEGUNDOS</span>
+                </div>
+            </div>
+            <h1>Nuestra Historia</h1>
+            <div class="historia">
+                <div class="fotohistoria1">
+                    <img class="fotonovios1" src="../img/people-2594745_1280.png" alt="besonovios">
+                </div>
+                    <div class="textFotoNovios1">
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        </p>
+                    </div>
+                    <div class="textFotoNovios2">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </p>
+                    </div>
+                <div class="fotohistoria2">
+                        <img class="fotonovios2" src="../img/IMG_4618.png" alt="abrazonovios">
+                </div>      
+            </div>        
+        </section>
+
+        <section id="lugar">
+            <h1>Lugar</h1>
+                <div class="contenido contenido-lugar">
+                    <div>
+                        <img src="../img/image0.png" alt="fotodellugardelafiesta">
+                    </div>
+    
+                    <div>
+                        <div>
+                            <i class='bx bx-church bx-lg'></i>
+
+                            <h4>Capilla San Benito</h4>
+                            <p><b>Dirección:</b> Caseros 5000</p>
+
+                            <p><b>Horario:</b> 17:00hs</p>
+                        </div>
+                        <div>
+                            <i class='bx bx-party bx-lg' ></i>
+                            <h4>Luna India</h4>
+                            <p><b>Dirección:</b> Av. San Martín 5555</p>
+                            <p><b>Horario:</b> 19:00</p>
+                        </div>     
+                    </div>
+    
+                    <div>
+                        <i class='bx bx-map bx-lg' ></i>
+                        <p><b>Cómo llegar</b></p>
+                    </div>
+                    <div>
+                        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107134.25572207307!2d-68.90756489731325!3d-32.952448504944165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e72b85971342b%3A0xbbbd1aeba7b67a88!2sLuna%20India!5e0!3m2!1ses-419!2sar!4v1712935383788!5m2!1ses-419!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                    </div>
+                </div>            
+        </section>
+
+        <section id="regalos">
+            <h1>Regalos</h1>
+            <div class="contenido contenido-regalos">
+                <div>
+                    <img src="../img/Vector.png" alt="regalo">
+                </div>
+                <div>
+                    <p>El mejor regalo para nosotros es tu presencia, pero si querés podés colaborar enviándonos dinero (Alias:HOLA.CODO.NODE) o con alguno de los objetos de</p><a href="https://docs.google.com/document/d/1IFSlQ_DWMUDhGRobmW2LrFGWnAUVCPpqCyAUR5JWdCY/edit?usp=sharing" target="_blank">ESTA LISTA</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="asistencia">
+            <h1>Asistencia</h1>
+            <div class="contenido-asistencia">   
+                <form id="formulario">
+                    <div>
+                        <input type="text" class="cuadro-form texto-form" placeholder="Nombre y apellido" value="" name="nombre y apellido" id="nombre">
+                        <div id="error1" class="cuadroerror1"></div>
+                    </div>
+                    <div>
+                        <div class="cuadro-form">
+                            <label>¿Asistirás a la boda?</label>
+                        </div>
+                        <div class="opciones-form">
+                            <input type="radio" id="presente" name="confirmacionDeAsistencia" value="presente">
+                            <label>Si, allí estaré</label>
+                        </div>
+                        <div class="opciones-form">
+                            <input type="radio" id="ausente" name="confirmacionDeAsistencia" value="ausente">
+                            <label>No puedo ir</label>
+                        </div>
+                        <div id="error2" class="cuadroerror2"></div>
+                    </div>
+                    <div>
+                        <input type="email" class="cuadro-form texto-form" placeholder="Mail: nombre@ejemplo.com" value="" name="mail" id="mail">
+                        <div id="error3" class="cuadroerror1"></div>
+                    </div>
+                    <div>
+                        <input type="text" class="cuadro-form texto-form" placeholder="DNI: 11222333" value="" name="dni" id="dni">
+                        <div id="error4" class="cuadroerror1"></div>
+                    </div>
+                    <div>
+                        <div class="cuadro-form">
+                            <label>Preferencia alimentaria</label>
+                        </div>
+                        <div>
+                            <select class="opciones-form" name="alimentos" id="selecAlimentos0">
+                                <option selected>-Seleccione-</option>
+                                <option value="1">1- No tengo</option>
+                                <option value="2">2- Vegana</option>
+                                <option value="3">3- Vegetariana</option>
+                                <option value="4">4- Sin lácteos</option>
+                                <option value="5">5- Sin TACC</option>
+                            </select>
+                        </div>
+                    </div>  
+                    <div>
+                        <div class="cuadro-form">
+                            <label>¿Qué canción te gustaría escuchar?</label>
+                        </div>
+                        <div>
+                            <input type="text" class="cuadro-form opciones-form" placeholder="tu canción: . . . . . . . ." value="" name="cancion" id="cancion">
+                        </div>
+                        <div id="error9" class="cuadroerror2"></div>
+                    </div>
+                    <div class="cuadrobtn-form">
+                        <div>
+                            <button type="reset" class="formbtn" id="btnBorrar">ELIMINAR</button>
+                        </div>
+                        <div>
+                            <button type="submit" class="formbtn" id="btnConfirmar">CONFIRMAR</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="form-img">
+                    <img src="../img/noscasamos.png" alt="formulario">
+                </div>
+            </div>
+        </section>
+
+        <section id="galeria">
+            <h1>Galería</h1>
+            <div class="grid-container">
+                <div class="grid-item"><img src="https://www.stevegroganphotography.com/wp-content/uploads/2018/07/Victoria-Warehouse-Wedding-Photography.jpg" alt="Imagen 1"></div>
+                <div class="grid-item"><img src="https://www.stevegroganphotography.com/wp-content/uploads/2017/12/Steve-Grogan-Photography-Best-of-2017-44.jpg" alt="Imagen 2"></div>
+                <div class="grid-item"><img src="https://www.stevegroganphotography.com/wp-content/uploads/2017/12/Steve-Grogan-Photography-Best-of-2017-37.jpg" alt="Imagen 3"></div>
+                <div class="grid-item"><img src="https://www.stevegroganphotography.com/wp-content/uploads/2016/08/Manchester-Wedding-Photography.jpg" alt="Imagen 4"></div>
+                <div class="grid-item"><img src="https://www.stevegroganphotography.com/wp-content/uploads/2018/11/Tuscany-Wedding-Photography-2.jpg" alt="Imagen 5"></div>
+                <div class="grid-item"><img src="https://www.stevegroganphotography.com/wp-content/uploads/2017/07/Hambledon-House-Wedding-Surrey-57.jpg" alt="Imagen 6"></div>
+                <div class="grid-item"><img src="https://2.bp.blogspot.com/-Ug8MMV6ngV4/WSw6AD6drtI/AAAAAAAAF8Y/94SHNVflaLgPzCA8qabYHuav3I7PJ_mtQCLcB/s1600/454-groom-crying-at-wedding-ceremony.jpg" alt="Imagen 6"></div>
+                <div class="grid-item"><img src="https://images.squarespace-cdn.com/content/53ca0941e4b09aa5f73e3191/1474498488692-FTZ9H5P2GS5VMQ19W9LI/Flashmob+Dorset+Wedding+Photographer.jpg?format=1500w&content-type=image%2Fjpeg" alt="Imagen 6"></div>
+                <div class="grid-item"><img src="https://madanirings.com/images/user/c85ae1612196831b4b1f5225ca091222.jpg" alt="Imagen 6"></div>
+                <div class="grid-item"><img src="https://imgv3.fotor.com/images/homepage-feature-card/upload-image_2023-04-11-023334_kxuh.jpg" alt="Imagen 6"></div>
+            </div> 
+        </section>
+
+    </main>
+
+    <footer>
+        
+        <p>Derechos reservados @2024 CodoaCodo Grupo 4</p>
+
+    </footer>
+
+
+    <script src="../js/index.js"></script>
+    <script src="../js/navbar-scroll.js"></script>
+    <script src="../js/validForm.js"></script>
+</body>
+</html>
