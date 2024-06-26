@@ -51,7 +51,7 @@ const listUsers=async() =>{
             <td>${invitados.nombre}</td>
             <td>${invitados.asistencia}</td>
             <td>${invitados.cancion}</td>
-            <td>${invitados.alimentacion}</td>
+            <td>${invitados.prefAlimentaria_id}</td>
             </tr>`;
             
         });
