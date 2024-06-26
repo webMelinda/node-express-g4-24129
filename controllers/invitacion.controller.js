@@ -66,12 +66,12 @@ const store = (req, res) => {
 
 const update = (req, res) => {
   const { id } = req.params;
-  const { nombre, asistencia, prefAlimentaria, cancion } = req.body;
+  const { nombre, asistencia, prefAlimentaria_id, cancion } = req.body;
 
   const sql =
-    // "UPDATE invitados SET nombre = ?, asistencia = ?, prefAlimentaria = ?, cancion = ', WHERE id = ?";
-    "UPDATE invitados SET nombre = ?, asistencia = ?, prefAlimentaria = ?, cancion = ? WHERE id = ?";
-  db.query(sql, [nombre, asistencia, prefAlimentaria, cancion, id], (error, result) => {
+
+    "UPDATE invitados SET nombre = ?, asistencia = ?, prefAlimentaria_id = ?, cancion = ? WHERE id = ?";
+  db.query(sql, [nombre, asistencia, prefAlimentaria_id, cancion, id], (error, result) => {
     if (error) {
       return res.status(500).json({ error: "Intente mas tarde" });
     }
@@ -85,6 +85,8 @@ const update = (req, res) => {
     res.json(invitados);
   });
 };
+
+
 
 const destroy = (req, res) => {
   const { id } = req.params;
