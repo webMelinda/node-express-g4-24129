@@ -8,7 +8,7 @@ const dataTableOptions ={
     destroy: true,   
     columnDefs: [
         { className: "center", targets: [0] },
-        { orderable: false, targets: [2, 3, 4] }
+        { orderable: false, targets: [2, 3] }
     ],
     language: {
         lengthMenu: "Mostrar _MENU_ registros por página",
@@ -42,16 +42,16 @@ const initDataTable=async()=>{
 
 const listUsers=async() =>{
     try{
-        const response=await fetch("https://jsonplaceholder.typicode.com/users");
+        const response=await fetch("http://localhost:3000/invitados");
         const users= await response.json();
         let content= ``;
-        users.forEach((user,index) => {
+        users.forEach((invitados,index) => {
             content+= `<tr>
             <td>${index + 1}</td>
-            <td>${user.name}</td>
-            <td>${user.email}</td>
-            <td>${user.address.city}</td>
-            <td>${user.company.name}</td>
+            <td>${invitados.nombre}</td>
+            <td>${invitados.asistencia}</td>
+            <td>${invitados.cancion}</td>
+            <td>${invitados.alimentacion}</td>
             </tr>`;
             
         });
