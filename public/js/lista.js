@@ -42,7 +42,7 @@ const initDataTable=async()=>{
 
 const listUsers=async() =>{
     try{
-        const response=await fetch("http://localhost:3000/invitados");
+        const response=await fetch("/invitados");
         const users= await response.json();
         let content= ``;
         users.forEach((invitados,index) => {
