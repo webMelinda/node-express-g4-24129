@@ -40,29 +40,57 @@ const initDataTable=async()=>{
 
 };
 
-const listUsers=async() =>{
-    try{
-        const response=await fetch("/invitados");
-        const users= await response.json();
-        let content= ``;
-        users.forEach((invitados,index) => {
-            content+= `<tr>
-            <td>${index + 1}</td>
-            <td>${invitados.nombre}</td>
-            <td>${invitados.asistencia}</td>
-            <td>${invitados.cancion}</td>
-            <td>${invitados.prefAlimentaria_id}</td>
-            </tr>`;
-            
-        });
-        tableBody_users.innerHTML=content;
-    } catch(ex){
-        alert(ex);
+const listUsers = async () => {
+    try {
+      const response = await fetch("/invitados");
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const users = await response.json();
+      let content = ``;
+      users.forEach((invitados, index) => {
+        content += `<tr>
+        <td>${index + 1}</td>
+        <td>${invitados.nombre}</td>
+        <td>${invitados.asistencia}</td>
+        <td>${invitados.cancion}</td>
+        <td>${invitados.prefAlimentaria_id}</td>
+        </tr>`;
+      });
+      document.getElementById('tableBody_users').innerHTML = content;
+    } catch (ex) {
+      console.error('Fetch error: ', ex);
+      alert('Error fetching users: ' + ex.message);
     }
-};
-
-
-
-window.addEventListener("load", async()=>{
+  };
+  
+  window.addEventListener("load", async () => {
     await initDataTable();
-});
+  });
+  
+// const listUsers=async() =>{
+//     try{
+//         const response=await fetch("/invitados");
+//         const users= await response.json();
+//         let content= ``;
+//         users.forEach((invitados,index) => {
+//             content+= `<tr>
+//             <td>${index + 1}</td>
+//             <td>${invitados.nombre}</td>
+//             <td>${invitados.asistencia}</td>
+//             <td>${invitados.cancion}</td>
+//             <td>${invitados.prefAlimentaria_id}</td>
+//             </tr>`;
+            
+//         });
+//         tableBody_users.innerHTML=content;
+//     } catch(ex){
+//         alert(ex);
+//     }
+// };
+
+
+
+// window.addEventListener("load", async()=>{
+//     await initDataTable();
+// });
