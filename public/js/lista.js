@@ -51,6 +51,7 @@ const listUsers = async () => {
       users.forEach((invitados, index) => {
         content += `<tr>
         <td>${index + 1}</td>
+        <td>${invitados.id}</td>
         <td>${invitados.nombre}</td>
         <td>${invitados.asistencia}</td>
         <td>${invitados.cancion}</td>

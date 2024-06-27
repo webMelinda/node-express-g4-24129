@@ -1,7 +1,7 @@
 const db = require("../db/db");
 
 const index = (req, res) => {
-  const sql = "SELECT * FROM invitados";
+  const sql = "SELECT * FROM invitados";  
 
   db.query(sql, (error, rows) => {
     if (error) {
