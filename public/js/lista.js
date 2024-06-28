@@ -56,6 +56,7 @@ const listUsers = async () => {
         <td>${invitados.asistencia}</td>
         <td>${invitados.cancion}</td>
         <td>${invitados.prefAlimentaria_id}</td>
+        <td>${invitados.entretenimiento_id}</td>
         </tr>`;
       });
       document.getElementById('tableBody_users').innerHTML = content;
