@@ -30,29 +30,13 @@ const show = (req, res) => {
   });
 };
 
-// Probar en Postman si funcionan
-
-// const store = (req, res) => {
-//   const { nombre, asistencia, cancion } = req.body;
-
-//   const sql = "INSERT INTO invitados (nombre, asistencia,  cancion) VALUES (?, ?, ?)";
-//   db.query(sql, [nombre, asistencia, cancion], (error, result) => {
-//     if (error) {
-//       return res.status(500).json({ error: "Intente mas tarde" });
-//     }
-
-//     const invitado = { ...req.body, id: result.insertId };
-
-//     res.json(invitado);
-//   });
-// };
 
 const store = (req, res) => {
-  const { nombre, asistencia, login_id, cancion } = req.body;
+  const { nombre, asistencia, login_id, entretenimiento_id, cancion } = req.body;
 
-  const sql = "INSERT INTO invitados (nombre, asistencia, login_id, cancion) VALUES (?, ?, ?, ?)";
+  const sql = "INSERT INTO invitados (nombre, asistencia, login_id, entretenimiento_id, cancion) VALUES (?, ?, ?, ?, ?)";
   console.log("Consulta SQL generada:", sql);
-  db.query(sql, [nombre, asistencia, login_id, cancion], (error, result) => {
+  db.query(sql, [nombre, asistencia, login_id, entretenimiento_id, cancion], (error, result) => {
     if (error) {
       console.error("Error en la consulta a la base de datos:", error);
       return res.status(500).json({ error: "Intente más tarde" });
@@ -66,12 +50,12 @@ const store = (req, res) => {
 
 const update = (req, res) => {
   const { id } = req.params;
-  const { nombre, asistencia, prefAlimentaria_id, cancion } = req.body;
+  const { nombre, asistencia, prefAlimentaria_id, entretenimiento_id, cancion } = req.body;
 
   const sql =
 
-    "UPDATE invitados SET nombre = ?, asistencia = ?, prefAlimentaria_id = ?, cancion = ? WHERE id = ?";
-  db.query(sql, [nombre, asistencia, prefAlimentaria_id, cancion, id], (error, result) => {
+    "UPDATE invitados SET nombre = ?, asistencia = ?, prefAlimentaria_id = ?, entretenimiento_id = ?, cancion = ? WHERE id = ?";
+  db.query(sql, [nombre, asistencia, prefAlimentaria_id, entretenimiento_id, cancion, id], (error, result) => {
     if (error) {
       return res.status(500).json({ error: "Intente mas tarde" });
     }
