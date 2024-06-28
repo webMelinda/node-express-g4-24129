@@ -16,6 +16,10 @@ div .row {
     vertical-align: middle !important;
 }
 
+.navbar-brand{
+    color: #C06C6E;
+}
+
 
 
 /*Navbar*/
