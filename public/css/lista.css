@@ -7,9 +7,40 @@ body {background: #C06C6E;  /* fallback for old browsers */
 
 }
 
-
+div .row {
+    margin-top: 5rem;
+}
 
 .center{
     text-align: center !important;
     vertical-align: middle !important;
 }
+
+
+
+/*Navbar*/
+nav{
+    margin-bottom: 10rem;
+}
+.logo {
+    width: 20px; 
+    height: auto;
+    margin: 10px;
+}
+
+.navbar {
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+    background-color: #FAFAE9;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
