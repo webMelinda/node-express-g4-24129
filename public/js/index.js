@@ -34,13 +34,6 @@ contadorFecha()
 
 setInterval(contadorFecha, 1000)
 
-// comienza musica
 
 
-function audioAuto(){
-    const audio = new Audio('./music/perfect.mp3')
-    audio.volume = 0.5;
-    audio.play();
-}
 
-audioAuto()
