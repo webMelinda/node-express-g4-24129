@@ -1,17 +1,25 @@
 const db = require("../db/db");
 
 const index = (req, res) => {
-  const sql = "SELECT * FROM invitados";  
+  const sql = `
+    SELECT invitados.id, invitados.nombre, invitados.asistencia, 
+           invitados.login_id, alimentacion.tipo AS prefAlimentaria, 
+           entretenimiento.entretenimientos AS entretenimiento, 
+           invitados.cancion 
+    FROM invitados 
+    LEFT JOIN alimentacion ON invitados.prefAlimentaria_id = alimentacion.id 
+    LEFT JOIN entretenimiento ON invitados.entretenimiento_id = entretenimiento.id
+  `;
 
   db.query(sql, (error, rows) => {
     if (error) {
-      return res.status(500).json({ error: "No hay datos" });
+      return res.status(500).json({ error: "Error en la consulta SQL" });
     }
 
     res.json(rows);
   });
 };
- 
+
 
 const show = (req, res) => {
   const { id } = req.params;
@@ -32,11 +40,11 @@ const show = (req, res) => {
 
 
 const store = (req, res) => {
-  const { nombre, asistencia, login_id, entretenimiento_id, cancion } = req.body;
+  const { nombre, asistencia, login_id, prefAlimentaria_id, entretenimiento_id, cancion } = req.body;
 
-  const sql = "INSERT INTO invitados (nombre, asistencia, login_id, entretenimiento_id, cancion) VALUES (?, ?, ?, ?, ?)";
+  const sql = "INSERT INTO invitados (nombre, asistencia, login_id, prefAlimentaria_id, entretenimiento_id, cancion) VALUES (?, ?, ?, ?, ?, ?)";
   console.log("Consulta SQL generada:", sql);
-  db.query(sql, [nombre, asistencia, login_id, entretenimiento_id, cancion], (error, result) => {
+  db.query(sql, [nombre, asistencia, login_id, prefAlimentaria_id, entretenimiento_id, cancion], (error, result) => {
     if (error) {
       console.error("Error en la consulta a la base de datos:", error);
       return res.status(500).json({ error: "Intente más tarde" });
